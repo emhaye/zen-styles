@@ -5,7 +5,7 @@
     background-image: radial-gradient(
       color-mix(in oklch, var(--toolbox-textcolor) 20%, transparent) 7px,
       transparent 7.5px ) !important;
-    background-size: 21px 22px !important;
+    background-size: 20px 20px !important;
     background-position: 53% 50% !important;
   }
 }
@@ -32,7 +32,7 @@ tooltip {
   border-radius: 20px !important;
   padding: 5px 12px !important;
   border: 1px solid var(--zen-colors-border) !important;
-  background: color-mix(in srgb, var(--zen-primary-color), black 80%) !important;
+  background: var(--zen-colors-tertiary) !important;
   color: #f3f3f3 !important;
   font-size: 12px !important;
   font-weight: 600 !important;
