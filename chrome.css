@@ -1,12 +1,11 @@
 /* Arc-like appearance for Window Controls on macOS */
-
 @media (-moz-platform: macos) {
   :root[zen-single-toolbar="true"] .titlebar-buttonbox-container {
     color: var(--toolbox-textcolor) !important;
     background-image: radial-gradient(
     color-mix(in oklch, var(--toolbox-textcolor) 20%, transparent) 7px,
     transparent 7.5px ) !important;
-    background-size: 18px 18px !important;
+    background-size: 14px 14px !important;
     background-position: 53% 50% !important;
     margin-right: 5px !important;
   }
