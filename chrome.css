@@ -1,17 +1,16 @@
 /* Arc-like appearance for Window Controls on macOS */
-/*
 @media (-moz-platform: macos) {
   :root[zen-single-toolbar="true"] .titlebar-buttonbox-container {
     color: var(--toolbox-textcolor) !important;
     background-image: radial-gradient(
     color-mix(in oklch, var(--toolbox-textcolor) 20%, transparent) 7px,
     transparent 7.5px ) !important;
-    background-size: 12px 12px !important;
+    background-size: 22px 22px !important;
     background-position: 53% 50% !important;
     margin-right: 5px !important;
   }
 }
-*/
+
 /* Arc-like appearance for Tooltips */
 tooltip {
   -moz-appearance: none !important;
@@ -35,7 +34,7 @@ tooltip {
   padding: 5px 12px !important;
   border: 1px solid var(--zen-colors-border) !important;
   background: color-mix(in srgb, var(--zen-primary-color), black 80%) !important;
-  color: #303030 !important;
+  color: #f3f3f3 !important;
   font-size: 12px !important;
   font-weight: 600 !important;
 }
