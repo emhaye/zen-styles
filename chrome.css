@@ -3,10 +3,11 @@
   :root[zen-single-toolbar="true"] .titlebar-buttonbox-container {
     color: var(--toolbox-textcolor) !important;
     background-image: radial-gradient(
-      color-mix(in oklch, var(--toolbox-textcolor) 20%, transparent) 7px,
-      transparent 7.5px ) !important;
-    background-size: 20px 20px !important;
+    color-mix(in oklch, var(--toolbox-textcolor) 20%, transparent) 7px,
+    transparent 7.5px ) !important;
+    background-size: 22px 22px !important;
     background-position: 53% 50% !important;
+    margin-right: 5px !important;
   }
 }
 
@@ -17,10 +18,10 @@ tooltip {
   color: rgb(210, 230, 238) !important;
   background-color: var(--zen-colors-primary) !important;
   border-radius: 2px 15px 15px 15px !important;
-  padding: 12px !important;
+  padding: 5px 10px !important;
   max-width: 50em !important;
   white-space: unset !important;
-  font-size: 14px !important;
+  font-size: 12px !important;
   font-weight: 600 !important;
 }
 
@@ -32,8 +33,8 @@ tooltip {
   border-radius: 20px !important;
   padding: 5px 12px !important;
   border: 1px solid var(--zen-colors-border) !important;
-  background: var(--zen-colors-tertiary) !important;
-  color: #f3f3f3 !important;
+  background: color-mix(in srgb, var(--zen-primary-color), black 80%) !important;
+  color: #303030 !important;
   font-size: 12px !important;
   font-weight: 600 !important;
 }
@@ -102,59 +103,94 @@ findbar {
 
 /* Arc-like Navigation Buttons (taller) */
 #back-button {
-	list-style-image: url("chrome://browser/skin/back.svg") !important;
+  list-style-image: url("chrome://browser/skin/back.svg") !important;
 }
 #forward-button {
-	list-style-image: url("chrome://browser/skin/forward.svg") !important;
+  list-style-image: url("chrome://browser/skin/forward.svg") !important;
 }
 #reload-button {
-	list-style-image: url("chrome://global/skin/icons/reload.svg") !important;
+  list-style-image: url("chrome://global/skin/icons/reload.svg") !important;
 }
 
 /* Arc-like appearance for Tab Search */
 #zen-folder-tabs-popup {
-  font-size: 13px !important;
+  .folders-tabs-list-item-label {
+    font-size: 13px !important;
+  }
+  .tab-list-item-secondary-label {
+    font-size: 11px !important;
+  }
 }
 
 /* Arc-like appearance to URL Bar and Command Bar */
-.urlbar-input {
+#urlbar .urlbar-input {
   font-size: 13px !important;
   margin-left: 4px !important;
+  margin-right: 10px !important;
   opacity: 0.8 !important;
 }
 #urlbar[breakout-extend="true"] .urlbar-input {
-  font-size: 16px !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
   margin-left: 0px !important;
   opacity: 1 !important;
 }
-#urlbar[breakout-extend="true"] {
-  width: 660px !important;
+#urlbar[breakout-extend="true"] #urlbar-background {
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  outline: none !important;
+  background-color: rgba(20, 20, 20, 0.98) !important;
 }
-
-/* Arc-like appearnace to Tab Backgrounds */
-#zen-tabs-wrapper .tab-background,
-toolbarbutton#tabs-newtab-button {
-  box-shadow: none !important;
+#urlbar[breakout-extend="true"] {
+  width: 760px !important;
+}
+#urlbar[breakout-extend="true"] .urlbar-input-container {
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+}
+#urlbar[breakout-extend="true"] .urlbarView {
+  border: none !important;
+}
+#urlbar[breakout-extend="true"] .urlbarView-title {
+  font-size: 13px !important;
+}
+#urlbar[breakout-extend="true"] .urlbarView-row {
+  --urlbarView-item-inline-padding: 10px !important;
+  --urlbarView-item-block-padding: 9px !important;
+}
+#urlbar[breakout-extend="true"] .urlbarView-favicon {
+  --urlbarView-favicon-width: 16px !important;
+  background-color: transparent !important;
 }
 
 /* Arc-like appearance to Folder Icons */
 zen-folder {
   --zen-folder-stroke: light-dark(
-    color-mix(in srgb, var(--zen-primary-color) 40%, black),
-    color-mix(in srgb, var(--zen-colors-primary) 0%, var(--toolbox-textcolor))) !important;
+  color-mix(in srgb, var(--zen-primary-color) 40%, black),
+  color-mix(in srgb, var(--zen-colors-primary) 0%, var(--toolbox-textcolor))) !important;
 }
 .tab-group-folder-icon rect,
 .tab-group-folder-icon path {
   stroke-width: 1.8px !important;
+}
+.tab-group-folder-icon {
+  scale: 110% !important;
 }
 .tab-group-folder-icon #folder-icon image {
   height: 17px !important;
   transform: translate(-180%, 11%) !important;
 }
 
-/* Arc-like font size for Tabs and Folders */
+/* Arc-like appearance to Tabs and Folders */
 #tabbrowser-tabs {
   font-size: 14px !important;
+}
+#zen-tabs-wrapper .tab-background,
+toolbarbutton#tabs-newtab-button {
+  box-shadow: none !important;
+}
+.tab-close-button {
+  border-radius: 7px !important;
 }
 
 /* Arc-like appearance to Pinned Tabs Separator */
@@ -168,7 +204,17 @@ zen-folder {
 }
 .subviewbutton {
   font-size: 15px !important;
-  margin: 2px !important;
+  margin: 3px !important;
+}
+
+/* Arc-like appearance to New Tab and Downloads button */
+#zen-create-new-button .toolbarbutton-icon {
+  width: calc(2 * var(--toolbarbutton-inner-padding) + 20px) !important;
+  height: calc(2 * var(--toolbarbutton-inner-padding) + 20px) !important;
+}
+#downloads-button #downloads-indicator-icon {
+  min-width: calc(2 * var(--toolbarbutton-inner-padding) + 10px) !important;
+  min-height: calc(2 * var(--toolbarbutton-inner-padding) + 10px) !important;
 }
 
 /* Arc-like Create New Popup */
@@ -202,10 +248,12 @@ zen-folder {
   height: 24px !important;
   margin-right: 15px !important;
 }
+#zenCreateNewPopup menuseparator::before {
+  border-top: 2px solid var(--zen-colors-primary) !important;
+}
 #zenCreateNewPopup menuseparator {
-  border-bottom: 2px solid var(--zen-colors-primary) !important;
-  margin-top: 10px !important;
-  margin-bottom: 10px !important;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
   margin-left: 0px !important;
   margin-right: 0px !important;
 }
@@ -229,9 +277,6 @@ zen-folder {
 }
 .zen-current-workspace-indicator {
   margin-bottom: -4px !important;
-}
-:root[zen-compact-mode=true] #navigator-toolbox {
-  --zen-main-browser-background-toolbar: var(--zen-main-browser-background) !important;
 }
 :root[zen-compact-mode=true] #navigator-toolbox #titlebar {
   margin-bottom: 10px !important;
