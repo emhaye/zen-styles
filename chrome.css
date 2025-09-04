@@ -5,7 +5,7 @@
     background-image: radial-gradient(
     color-mix(in oklch, var(--toolbox-textcolor) 20%, transparent) 7px,
     transparent 7.5px ) !important;
-    background-size: 20px 20px !important;
+    background-size: 22px 22px !important;
     background-position: 53% 50% !important;
     margin-right: 5px !important;
   }
