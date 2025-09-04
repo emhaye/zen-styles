@@ -3,13 +3,11 @@
   :root[zen-single-toolbar="true"] .titlebar-buttonbox-container {
     color: var(--toolbox-textcolor) !important;
     background-image: radial-gradient(
-      circle,
-      color-mix(in oklch, var(--toolbox-textcolor) 25%, transparent) 6px,
-      transparent 6.5px
-    ) !important;
+    color-mix(in oklch, var(--toolbox-textcolor) 20%, transparent) 7px,
+    transparent 7.5px ) !important;
     background-size: 12px 12px !important;
-    background-position: center center !important;
-    margin-right: 6px !important;
+    background-position: 53% 50% !important;
+    margin-right: 5px !important;
   }
 }
 
