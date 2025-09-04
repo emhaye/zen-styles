@@ -1,7 +1,6 @@
 /* Arc-like appearance for Window Controls on macOS */
 @media (-moz-platform: macos) {
   :root[zen-single-toolbar="true"] .titlebar-buttonbox-container {
-    /* Warna tombol */
     color: var(--toolbox-textcolor) !important;
     background-image: radial-gradient(
       circle,
@@ -12,11 +11,6 @@
     background-position: center center !important;
     background-repeat: no-repeat !important;
     margin-right: 6px !important;
-    width: 36px !important;
-    height: 14px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
   }
 }
 
