@@ -1,4 +1,5 @@
 /* Arc-like appearance for Window Controls on macOS */
+/*
 @media (-moz-platform: macos) {
   :root[zen-single-toolbar="true"] .titlebar-buttonbox-container {
     color: var(--toolbox-textcolor) !important;
@@ -10,7 +11,7 @@
     margin-right: 5px !important;
   }
 }
-
+*/
 /* Arc-like appearance for Tooltips */
 tooltip {
   -moz-appearance: none !important;
